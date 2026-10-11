@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>دعوة عقد قران | سهيل & شيماء - Sohail & Shimaa</title>
+    
+    <!-- Open Graph for social sharing preview (WhatsApp, Facebook, Twitter) -->
+    <meta property="og:title" content="دعوة كتب كتاب | سهيل & شيماء">
+    <meta property="og:description" content="يسرّنا أن نشارككم فرحتنا بمناسبة كتب كتابنا - الجمعة، 20 نوفمبر 2026 بفندق وقاعة كريستال بالاس">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts: Aref Ruqaa for Calligraphy, Amiri for Quranic & Classical Arabic, Cairo for clean UI -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@300;400;600;700;800&family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Canvas Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            50: '#fbf8ee',
+                            100: '#f6eed6',
+                            200: '#eddcaa',
+                            300: '#e1c376',
+                            400: '#d5aa4b',
+                            500: '#c2902d',
+                            600: '#a77323',
+                            700: '#86541f',
+                            800: '#6f441f',
+                            900: '#5c381d',
+                        },
+                        ivory: {
+                            50: '#fdfcf9',
+                            100: '#fbf8f2',
+                            200: '#f7f2e5',
+                            300: '#eee4ce',
+                            400: '#e1d2b0',
+                            800: '#3c3222',
+                            900: '#231d13'
+                        }
+                    },
+                    fontFamily: {
+                        ruqaa: ['"Aref Ruqaa"', 'serif'],
+                        amiri: ['"Amiri"', 'serif'],
+                        cairo: ['"Cairo"', 'sans-serif'],
+                        cinzel: ['"Cinzel"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --gold-gradient: linear-gradient(135deg, #a67425 0%, #dfb76c 28%, #fae5a9 48%, #c69438 72%, #825316 100%);
+            --gold-sheen: linear-gradient(120deg, rgba(255,255,255,0) 20%, rgba(255,245,210,0.85) 50%, rgba(255,255,255,0) 80%);
+            --card-bg: #faf6ee;
+            --bronze-dark: #3a2a18;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #17130e;
+            color: var(--bronze-dark);
+            overflow-x: hidden;
+            -webkit-tap-highlight-color: transparent;
+            position: relative;
+        }
+
+        /* Ambient Luxury Wallpaper Pattern */
+        .ambient-pattern {
+            background-color: #120e0a;
+            background-image: 
+                radial-gradient(circle at 50% 15%, rgba(194, 144, 45, 0.16) 0%, transparent 60%),
+                radial-gradient(circle at 50% 85%, rgba(134, 84, 31, 0.18) 0%, transparent 65%),
+                repeating-linear-gradient(45deg, rgba(194, 144, 45, 0.02) 0, rgba(194, 144, 45, 0.02) 1px, transparent 0, transparent 40px);
+        }
+
+        /* Metallic Gold Text Shader */
+        .text-gold-metallic {
+            background: linear-gradient(135deg, #875518 0%, #c49234 25%, #f5df9a 50%, #ba8629 75%, #69400f 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 1px 2px rgba(255, 235, 175, 0.3);
+            display: inline-block;
+        }
+
+        .text-gold-light {
+            background: linear-gradient(135deg, #c7963d 0%, #fae29f 50%, #c2902d 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Luxury Card Border and Texture */
+        .luxury-card {
+            background: radial-gradient(circle at 50% 10%, #fffcf5 0%, #f7f1e3 65%, #f0e6d0 100%);
+            box-shadow: 
+                0 25px 60px -15px rgba(0, 0, 0, 0.7),
+                0 0 0 1px rgba(212, 175, 85, 0.4),
+                inset 0 0 50px rgba(185, 137, 50, 0.08);
+            position: relative;
+        }
+
+        /* Ornate Double Border Frame */
+        .ornate-border {
+            position: relative;
+        }
+        .ornate-border::before {
+            content: '';
+            position: absolute;
+            inset: 7px;
+            border: 1px solid rgba(194, 144, 45, 0.45);
+            border-radius: 1.25rem;
+            pointer-events: none;
+        }
+        .ornate-border::after {
+            content: '';
+            position: absolute;
+            inset: 12px;
+            border: 1.5px solid rgba(194, 144, 45, 0.85);
+            border-radius: 1rem;
+            pointer-events: none;
+        }
+
+        /* Shimmer Wave Animation */
+        @keyframes shineSweep {
+            0% { transform: translateX(-120%) rotate(25deg); }
+            100% { transform: translateX(250%) rotate(25deg); }
+        }
+        .shine-effect {
+            position: relative;
+            overflow: hidden;
+        }
+        .shine-effect::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: var(--gold-sheen);
+            transform: translateX(-100%) rotate(25deg);
+            animation: shineSweep 5.5s infinite ease-in-out;
+            pointer-events: none;
+        }
+
+        /* Hanging Lantern Swing Animation */
+        @keyframes gentleSwayLeft {
+            0%, 100% { transform: rotate(-2.5deg); }
+            50% { transform: rotate(3deg); }
+        }
+        @keyframes gentleSwayRight {
+            0%, 100% { transform: rotate(2.5deg); }
+            50% { transform: rotate(-3deg); }
+        }
+        .sway-left {
+            transform-origin: top center;
+            animation: gentleSwayLeft 5s infinite ease-in-out;
+        }
+        .sway-right {
+            transform-origin: top center;
+            animation: gentleSwayRight 5.2s infinite ease-in-out;
+        }
+
+        /* Pulsing Glow for Lantern light */
+        @keyframes lanternGlow {
+            0%, 100% { opacity: 0.65; filter: drop-shadow(0 0 6px rgba(245, 202, 102, 0.7)); }
+            50% { opacity: 0.95; filter: drop-shadow(0 0 16px rgba(255, 222, 133, 0.95)); }
+        }
+        .lantern-light {
+            animation: lanternGlow 3s infinite ease-in-out;
+        }
+
+        /* Button Hover & Tap Effects */
+        .btn-gold {
+            background: linear-gradient(135deg, #bf8c30 0%, #e8c67c 50%, #af7c22 100%);
+            box-shadow: 0 4px 15px rgba(167, 115, 35, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.5);
+            transition: all 0.3s ease;
+        }
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 22px rgba(167, 115, 35, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+        }
+        .btn-gold:active {
+            transform: translateY(1px);
+        }
+
+        /* Floating Sparkles Canvas */
+        #sparkleCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 15;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 7px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #17130e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #a77323;
+            border-radius: 4px;
+        }
+
+        /* Toast Notifications */
+        .toast-enter {
+            animation: slideInUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .toast-exit {
+            animation: slideOutDown 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes slideInUp {
+            from { transform: translate(-50%, 100%); opacity: 0; }
+            to { transform: translate(-50%, 0); opacity: 1; }
+        }
+        @keyframes slideOutDown {
+            from { transform: translate(-50%, 0); opacity: 1; }
+            to { transform: translate(-50%, 100%); opacity: 0; }
+        }
+    </style>
+</head>
+<body class="ambient-pattern min-h-screen py-4 sm:py-10 px-3 sm:px-6 flex flex-col items-center justify-center selection:bg-gold-300 selection:text-gold-900">
+
+    <!-- Interactive golden particles canvas -->
+    <canvas id="sparkleCanvas"></canvas>
+
+    <!-- Floating Top Control Bar (Audio & Sparkles Toggle) -->
+    <header class="fixed top-4 z-40 flex items-center gap-3 bg-neutral-900/80 backdrop-blur-md px-4 py-2 rounded-full border border-gold-500/30 shadow-lg text-xs sm:text-sm text-gold-200">
+        <button id="toggleSparklesBtn" class="flex items-center gap-1.5 hover:text-white transition-colors" title="تشغيل / إيقاف تأثير البريق الذهبي">
+            <i class="fa-solid fa-sparkles text-gold-400" id="sparkleIcon"></i>
+            <span>البريق</span>
+        </button>
+        <span class="w-[1px] h-4 bg-gold-500/40"></span>
+        <button id="audioToggleBtn" class="flex items-center gap-1.5 hover:text-white transition-colors" title="تشغيل نغمة المناسبة">
+            <i class="fa-solid fa-volume-high text-gold-400" id="audioIcon"></i>
+            <span id="audioText">موسيقى هادئة</span>
+        </button>
+    </header>
+
+    <!-- MAIN INVITATION CARD -->
+    <main class="w-full max-w-[540px] luxury-card ornate-border rounded-3xl p-6 sm:p-10 my-8 relative overflow-hidden transition-all duration-300 border border-gold-400/40">
+        
+        <!-- Architectural Arch Floral Background Accents (SVG vectors) -->
+        <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-80 h-32 opacity-25 pointer-events-none">
+            <svg viewBox="0 0 400 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 150 C 20 50, 100 10, 200 10 C 300 10, 380 50, 380 150" stroke="#a77323" stroke-width="2.5" stroke-dasharray="6,4"/>
+                <circle cx="200" cy="10" r="5" fill="#a77323" />
+            </svg>
+        </div>
+
+        <!-- Left Ornate Islamic Lantern Hanging from Top Arch -->
+        <div class="absolute top-2 left-3 sm:left-6 w-9 sm:w-11 sway-left z-20 pointer-events-none">
+            <svg viewBox="0 0 80 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full filter drop-shadow-md">
+                <!-- Lantern chain -->
+                <line x1="40" y1="0" x2="40" y2="45" stroke="#946624" stroke-width="2" stroke-dasharray="3,2"/>
+                <circle cx="40" cy="48" r="4" fill="#c2902d"/>
+                <!-- Top Cap -->
+                <path d="M25 60 C 25 50, 55 50, 55 60 L 65 72 L 15 72 Z" fill="#a77323"/>
+                <!-- Lantern Glass & Glow Body -->
+                <polygon points="15,72 65,72 55,130 25,130" fill="#fff5d1" fill-opacity="0.8" stroke="#a77323" stroke-width="2"/>
+                <!-- Golden Lattice Overlay -->
+                <line x1="25" y1="72" x2="45" y2="130" stroke="#b0812b" stroke-width="1.2"/>
+                <line x1="55" y1="72" x2="35" y2="130" stroke="#b0812b" stroke-width="1.2"/>
+                <circle cx="40" cy="100" r="10" fill="#ffdf7e" class="lantern-light"/>
+                <!-- Bottom Base & Tassel -->
+                <polygon points="25,130 55,130 40,150" fill="#a77323"/>
+                <circle cx="40" cy="155" r="3" fill="#86541f"/>
+                <line x1="40" y1="158" x2="40" y2="185" stroke="#86541f" stroke-width="2"/>
+            </svg>
+        </div>
+
+        <!-- Right Ornate Islamic Lantern Hanging from Top Arch -->
+        <div class="absolute top-2 right-3 sm:right-6 w-9 sm:w-11 sway-right z-20 pointer-events-none">
+            <svg viewBox="0 0 80 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full filter drop-shadow-md">
+                <!-- Lantern chain -->
+                <line x1="40" y1="0" x2="40" y2="45" stroke="#946624" stroke-width="2" stroke-dasharray="3,2"/>
+                <circle cx="40" cy="48" r="4" fill="#c2902d"/>
+                <!-- Top Cap -->
+                <path d="M25 60 C 25 50, 55 50, 55 60 L 65 72 L 15 72 Z" fill="#a77323"/>
+                <!-- Lantern Glass & Glow Body -->
+                <polygon points="15,72 65,72 55,130 25,130" fill="#fff5d1" fill-opacity="0.8" stroke="#a77323" stroke-width="2"/>
+                <!-- Golden Lattice Overlay -->
+                <line x1="25" y1="72" x2="45" y2="130" stroke="#b0812b" stroke-width="1.2"/>
+                <line x1="55" y1="72" x2="35" y2="130" stroke="#b0812b" stroke-width="1.2"/>
+                <circle cx="40" cy="100" r="10" fill="#ffdf7e" class="lantern-light"/>
+                <!-- Bottom Base & Tassel -->
+                <polygon points="25,130 55,130 40,150" fill="#a77323"/>
+                <circle cx="40" cy="155" r="3" fill="#86541f"/>
+                <line x1="40" y1="158" x2="40" y2="185" stroke="#86541f" stroke-width="2"/>
+            </svg>
+        </div>
+
+        <!-- Four Corner Arabesque Ornaments -->
+        <div class="absolute top-3 right-3 text-gold-600/60 pointer-events-none text-xl">✤</div>
+        <div class="absolute top-3 left-3 text-gold-600/60 pointer-events-none text-xl">✤</div>
+        <div class="absolute bottom-3 right-3 text-gold-600/60 pointer-events-none text-xl">✤</div>
+        <div class="absolute bottom-3 left-3 text-gold-600/60 pointer-events-none text-xl">✤</div>
+
+        <section class="text-center pt-2 sm:pt-4 relative z-10">
+            <!-- Bismillah Header -->
+            <div class="mb-5 sm:mb-7 flex flex-col items-center">
+                <p class="font-amiri text-xl sm:text-2xl text-gold-800 tracking-wider font-semibold opacity-90 drop-shadow-sm">
+                    بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+                </p>
+                <!-- Decorative Gold Divider Line with Arabesque Diamond -->
+                <div class="flex items-center justify-center gap-3 w-4/5 my-2">
+                    <div class="h-[1px] bg-gradient-to-l from-gold-500/70 to-transparent flex-grow"></div>
+                    <div class="text-gold-600 text-xs">❖</div>
+                    <div class="h-[1px] bg-gradient-to-r from-gold-500/70 to-transparent flex-grow"></div>
+                </div>
+            </div>
+
+            <!-- Grand Headline: كتب كتابنا -->
+            <div class="relative py-1">
+                <h1 class="font-ruqaa text-5xl sm:text-6xl md:text-7xl text-gold-metallic tracking-normal leading-tight font-bold drop-shadow">
+                    كَتْب كِتَابنا
+                </h1>
+                <!-- Small Golden Heart Ornament Below Headline -->
+                <div class="flex items-center justify-center gap-2 mt-2 mb-3">
+                    <span class="inline-block w-8 h-[1px] bg-gold-400"></span>
+                    <i class="fa-solid fa-heart text-gold-500 text-sm animate-pulse"></i>
+                    <span class="inline-block w-8 h-[1px] bg-gold-400"></span>
+                </div>
+            </div>
+
+            <!-- Warm Welcoming Invitation Subtitle -->
+            <p class="font-cairo text-base sm:text-lg text-gold-900 font-semibold max-w-sm mx-auto leading-relaxed mt-2 mb-6">
+                يَسُرّنا أن نُشارككم فرحتنا<br>
+                بمناسبة كَتْب كِتاب
+            </p>
+        </section>
+
+        <!-- COUPLE NAMES SECTION -->
+        <section class="my-6 sm:my-8 text-center relative z-10 py-4 px-3 rounded-2xl bg-gold-500/5 border border-gold-400/25">
+            <div class="flex items-center justify-center flex-row gap-3 sm:gap-6">
+                
+                <!-- Groom Name: سهيل / Sohail -->
+                <div class="flex-1 text-center">
+                    <h2 class="font-ruqaa text-4xl sm:text-5xl text-gold-metallic font-bold mb-1">
+                        سهيل
+                    </h2>
+                    <span class="font-cinzel text-xs sm:text-sm tracking-widest text-gold-700 uppercase font-semibold block">
+                        Sohail
+                    </span>
+                </div>
+
+                <!-- Ornate Center Connector: "و" With Heart -->
+                <div class="flex flex-col items-center justify-center px-1">
+                    <span class="font-ruqaa text-2xl sm:text-3xl text-gold-600 font-bold -mb-1">
+                        وَ
+                    </span>
+                    <div class="text-gold-500 text-sm">
+                        <i class="fa-solid fa-gem text-xs"></i>
+                    </div>
+                </div>
+
+                <!-- Bride Name: شيماء / Shimaa -->
+                <div class="flex-1 text-center">
+                    <h2 class="font-ruqaa text-4xl sm:text-5xl text-gold-metallic font-bold mb-1">
+                        شيماء
+                    </h2>
+                    <span class="font-cinzel text-xs sm:text-sm tracking-widest text-gold-700 uppercase font-semibold block">
+                        Shimaa
+                    </span>
+                </div>
+
+            </div>
+
+            <!-- Golden Vine Separator -->
+            <div class="flex items-center justify-center mt-4">
+                <svg width="180" height="18" viewBox="0 0 180 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 9 C 40 2, 60 16, 90 9 C 120 2, 140 16, 170 9" stroke="#b98932" stroke-width="1.5" stroke-linecap="round"/>
+                    <circle cx="90" cy="9" r="3.5" fill="#b98932"/>
+                </svg>
+            </div>
+        </section>
+
+        <!-- DATE & TIME DETAILS -->
+        <section class="my-6 space-y-3.5 relative z-10 max-w-md mx-auto">
+            <!-- Date Row -->
+            <div class="flex items-center justify-start gap-4 p-3.5 rounded-xl bg-white/70 backdrop-blur-sm border border-gold-300/60 shadow-sm transition-transform hover:scale-[1.01]">
+                <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-gold-400 to-gold-600 text-white flex items-center justify-center shadow-md flex-shrink-0">
+                    <i class="fa-regular fa-calendar-days text-xl"></i>
+                </div>
+                <div class="text-right">
+                    <span class="text-xs text-gold-800 font-medium block">تاريخ المناسبة</span>
+                    <strong class="text-base sm:text-lg text-gold-900 font-bold">الجمعة، 20 نوفمبر 2026</strong>
+                </div>
+            </div>
+
+            <!-- Time Row -->
+            <div class="flex items-center justify-start gap-4 p-3.5 rounded-xl bg-white/70 backdrop-blur-sm border border-gold-300/60 shadow-sm transition-transform hover:scale-[1.01]">
+                <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-gold-400 to-gold-600 text-white flex items-center justify-center shadow-md flex-shrink-0">
+                    <i class="fa-regular fa-clock text-xl"></i>
+                </div>
+                <div class="text-right">
+                    <span class="text-xs text-gold-800 font-medium block">التوقيت</span>
+                    <strong class="text-base sm:text-lg text-gold-900 font-bold">من 4:00 مساءً إلى 6:00 مساءً</strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- VENUE LOCATION PLAQUE (Styled after the exact card badge) -->
+        <section class="my-7 relative z-10">
+            <div class="relative p-5 rounded-2xl bg-gradient-to-b from-[#fbf7ee] to-[#f4ebd7] border-2 border-gold-400/70 shadow-md text-center max-w-md mx-auto">
+                <!-- Inner fine border -->
+                <div class="absolute inset-1.5 border border-gold-400/40 rounded-xl pointer-events-none"></div>
+
+                <div class="flex flex-col items-center justify-center">
+                    <div class="flex items-center justify-center gap-2 mb-1">
+                        <i class="fa-solid fa-location-dot text-gold-600 text-xl"></i>
+                        <h3 class="font-cinzel font-bold text-xl sm:text-2xl text-gold-900 tracking-wide">
+                            Crystal Palace Hall
+                        </h3>
+                    </div>
+                    <p class="font-cairo text-sm sm:text-base text-gold-800 font-semibold">
+                        اتحاد الشرطة الرياضي - القاهرة
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- LIVE COUNTDOWN TIMER -->
+        <section class="my-7 relative z-10 text-center">
+            <div class="flex items-center justify-center gap-2 mb-3">
+                <span class="h-[1px] w-8 bg-gold-400"></span>
+                <span class="font-cairo text-xs uppercase tracking-widest text-gold-800 font-bold">العد التنازلي لليوم المنتظر</span>
+                <span class="h-[1px] w-8 bg-gold-400"></span>
+            </div>
+
+            <!-- Timer Grid -->
+            <div class="grid grid-cols-4 gap-2 sm:gap-3 max-w-sm mx-auto" id="countdownContainer">
+                <!-- Days -->
+                <div class="p-2.5 sm:p-3 rounded-xl bg-white/80 border border-gold-300 shadow-sm flex flex-col items-center">
+                    <span id="daysCount" class="font-cairo text-2xl sm:text-3xl font-extrabold text-gold-800 leading-tight">--</span>
+                    <span class="text-[11px] sm:text-xs text-gold-700 font-medium mt-0.5">أيام</span>
+                </div>
+                <!-- Hours -->
+                <div class="p-2.5 sm:p-3 rounded-xl bg-white/80 border border-gold-300 shadow-sm flex flex-col items-center">
+                    <span id="hoursCount" class="font-cairo text-2xl sm:text-3xl font-extrabold text-gold-800 leading-tight">--</span>
+                    <span class="text-[11px] sm:text-xs text-gold-700 font-medium mt-0.5">ساعة</span>
+                </div>
+                <!-- Minutes -->
+                <div class="p-2.5 sm:p-3 rounded-xl bg-white/80 border border-gold-300 shadow-sm flex flex-col items-center">
+                    <span id="minutesCount" class="font-cairo text-2xl sm:text-3xl font-extrabold text-gold-800 leading-tight">--</span>
+                    <span class="text-[11px] sm:text-xs text-gold-700 font-medium mt-0.5">دقيقة</span>
+                </div>
+                <!-- Seconds -->
+                <div class="p-2.5 sm:p-3 rounded-xl bg-white/80 border border-gold-300 shadow-sm flex flex-col items-center">
+                    <span id="secondsCount" class="font-cairo text-2xl sm:text-3xl font-extrabold text-gold-600 leading-tight animate-pulse">--</span>
+                    <span class="text-[11px] sm:text-xs text-gold-700 font-medium mt-0.5">ثانية</span>
+                </div>
+            </div>
+            
+            <p id="eventStartedMessage" class="hidden font-cairo text-base font-bold text-gold-700 mt-3">
+                🎉 اليوم هو يوم الفرح والسعادة! بارك الله لهما وبارك عليهما 🎉
+            </p>
+        </section>
+
+        <!-- ACTION BUTTONS (Google Maps, Calendar, Share) -->
+        <section class="my-7 flex flex-wrap items-center justify-center gap-3 relative z-10">
+            <!-- Google Maps Button -->
+            <a 
+                href="https://www.google.com/maps/search/?api=1&query=Crystal+Palace+Hall+اتحاد+الشرطة+الرياضي+القاهرة" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="flex-1 min-w-[140px] flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-white font-semibold text-xs sm:text-sm btn-gold shadow-md">
+                <i class="fa-solid fa-map-location-dot text-base"></i>
+                <span>موقع القاعة</span>
+            </a>
+
+            <!-- Add to Calendar Button -->
+            <button 
+                id="addToCalendarBtn" 
+                class="flex-1 min-w-[140px] flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-white font-semibold text-xs sm:text-sm btn-gold shadow-md">
+                <i class="fa-regular fa-calendar-plus text-base"></i>
+                <span>حفظ الموعد</span>
+            </button>
+
+            <!-- Share Invitation Button -->
+            <button 
+                id="shareBtn" 
+                class="flex-1 min-w-[140px] flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-white/90 text-gold-900 border border-gold-400 font-semibold text-xs sm:text-sm hover:bg-gold-50 shadow-sm transition-all">
+                <i class="fa-solid fa-share-nodes text-gold-600 text-base"></i>
+                <span>مشاركة الدعوة</span>
+            </button>
+        </section>
+
+        <!-- RSVP & CONGRATULATION SECTION -->
+        <section class="mt-8 pt-6 border-t border-gold-300/60 relative z-10">
+            <div class="text-center mb-4">
+                <h4 class="font-cairo font-bold text-lg text-gold-900">
+                    <i class="fa-solid fa-envelope-open-text text-gold-500 ml-1.5"></i>
+                    تأكيد الحضور ومباركة العروسين
+                </h4>
+                <p class="text-xs text-gold-800">
+                    يسعدنا تأكيد حضوركم ومشاركتنا كلماتكم الطيبة
+                </p>
+            </div>
+
+            <form id="rsvpForm" class="space-y-3 bg-white/60 p-4 rounded-2xl border border-gold-300/50">
+                <!-- Guest Name Input -->
+                <div>
+                    <label for="guestName" class="block text-xs font-semibold text-gold-900 mb-1 text-right">الاسم الكريم :</label>
+                    <input 
+                        type="text" 
+                        id="guestName" 
+                        required 
+                        placeholder="أدخل اسمك الكريم..." 
+                        class="w-full px-3.5 py-2.5 rounded-xl border border-gold-300 focus:outline-none focus:ring-2 focus:ring-gold-500 bg-white text-sm text-gold-900 placeholder-neutral-400 text-right">
+                </div>
+
+                <!-- Attendance Selection -->
+                <div>
+                    <label class="block text-xs font-semibold text-gold-900 mb-1.5 text-right">هل ستشرفنا بالحضور؟</label>
+                    <div class="grid grid-cols-2 gap-2 text-xs">
+                        <label class="flex items-center justify-center gap-2 p-2.5 rounded-xl border border-gold-300 bg-white cursor-pointer hover:bg-gold-50 transition">
+                            <input type="radio" name="attendanceStatus" value="attend" checked class="text-gold-600 focus:ring-gold-500">
+                            <span class="font-semibold text-emerald-800">سأحضر بكل سرور 💍</span>
+                        </label>
+                        <label class="flex items-center justify-center gap-2 p-2.5 rounded-xl border border-gold-300 bg-white cursor-pointer hover:bg-gold-50 transition">
+                            <input type="radio" name="attendanceStatus" value="apologize" class="text-gold-600 focus:ring-gold-500">
+                            <span class="font-semibold text-stone-700">أعتذر لعدم التمكن 🤍</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Congratulatory Message (Optional) -->
+                <div>
+                    <label for="guestMessage" class="block text-xs font-semibold text-gold-900 mb-1 text-right">كلمة تهنئة للعروسين :</label>
+                    <textarea 
+                        id="guestMessage" 
+                        rows="2" 
+                        placeholder="بارك الله لكما وبارك عليكما وجمع بينكما في خير..." 
+                        class="w-full px-3.5 py-2 rounded-xl border border-gold-300 focus:outline-none focus:ring-2 focus:ring-gold-500 bg-white text-sm text-gold-900 placeholder-neutral-400 text-right resize-none"></textarea>
+                </div>
+
+                <!-- Submission Actions -->
+                <div class="flex flex-col sm:flex-row gap-2 pt-2">
+                    <!-- WhatsApp Direct Send -->
+                    <button 
+                        type="button" 
+                        id="sendWhatsAppBtn" 
+                        class="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-emerald-600 text-white font-semibold text-xs hover:bg-emerald-700 transition shadow">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                        <span>إرسال التهنئة عبر واتساب</span>
+                    </button>
+
+                    <!-- Direct Virtual Confirmation with Confetti -->
+                    <button 
+                        type="submit" 
+                        class="flex-1 flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl btn-gold text-white font-semibold text-xs shadow">
+                        <i class="fa-solid fa-champagne-glasses text-base"></i>
+                        <span>إرسال بطاقة التهنئة</span>
+                    </button>
+                </div>
+            </form>
+
+            <!-- Personalized Confirmation Message Card (Shown after RSVP) -->
+            <div id="rsvpSuccessCard" class="hidden mt-4 p-4 rounded-2xl bg-emerald-50 border border-emerald-300 text-center animate-fade-in">
+                <i class="fa-solid fa-circle-check text-emerald-600 text-2xl mb-1"></i>
+                <h5 class="font-bold text-emerald-900 text-sm" id="rsvpSuccessName">شكراً جزيلاً!</h5>
+                <p class="text-xs text-emerald-800 mt-1" id="rsvpSuccessDesc">
+                    تم استلام تهنئتكم الكريمة ببالغ الفرح والسرور. نتشرف بكم دائماً!
+                </p>
+            </div>
+        </section>
+
+        <!-- CLOSING BLESSING / FOOTER NOTE -->
+        <footer class="mt-8 pt-4 text-center relative z-10">
+            <div class="flex items-center justify-center gap-3 w-3/5 mx-auto mb-3">
+                <div class="h-[1px] bg-gradient-to-l from-gold-400 to-transparent flex-grow"></div>
+                <div class="text-gold-500 text-xs">❦</div>
+                <div class="h-[1px] bg-gradient-to-r from-gold-400 to-transparent flex-grow"></div>
+            </div>
+
+            <p class="font-cairo text-sm sm:text-base text-gold-900 font-bold leading-relaxed">
+                وجودكم معنا هو أجمل ما يُكمل فرحتنا
+            </p>
+
+            <p class="text-[11px] text-gold-700/80 mt-2 font-medium">
+                العاقبة لديكم بالمسرات والأفراح
+            </p>
+        </footer>
+
+    </main>
+
+    <!-- Calendar Selection Modal -->
+    <div id="calendarModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-[#faf6ee] w-full max-w-sm rounded-2xl p-6 border-2 border-gold-400/80 shadow-2xl relative text-right">
+            <button id="closeCalendarModal" class="absolute top-4 left-4 text-neutral-400 hover:text-neutral-700 text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h4 class="font-cairo font-bold text-base text-gold-900 mb-1">
+                إضافة الموعد إلى التقويم
+            </h4>
+            <p class="text-xs text-gold-800 mb-4">
+                اختر تطبيق التقويم المفضل لديك لتذكيرك بموعد كتب الكتاب:
+            </p>
+
+            <div class="space-y-2.5">
+                <a id="googleCalLink" href="#" target="_blank" class="w-full flex items-center justify-between p-3 rounded-xl bg-white border border-gold-300 hover:bg-gold-50 text-gold-900 font-semibold text-xs transition">
+                    <span class="flex items-center gap-2">
+                        <i class="fa-brands fa-google text-red-500 text-base"></i>
+                        تقويم جوجل (Google Calendar)
+                    </span>
+                    <i class="fa-solid fa-chevron-left text-xs text-gold-500"></i>
+                </a>
+
+                <button id="downloadIcsBtn" class="w-full flex items-center justify-between p-3 rounded-xl bg-white border border-gold-300 hover:bg-gold-50 text-gold-900 font-semibold text-xs transition">
+                    <span class="flex items-center gap-2">
+                        <i class="fa-brands fa-apple text-neutral-800 text-base"></i>
+                        تقويم آبل / أوتلوك (ملف .ics)
+                    </span>
+                    <i class="fa-solid fa-download text-xs text-gold-500"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Notification Toast -->
+    <div id="toastBox" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 hidden px-5 py-3 rounded-full bg-neutral-900/90 text-gold-100 text-xs sm:text-sm font-semibold shadow-2xl border border-gold-500/40 flex items-center gap-2.5">
+        <i class="fa-solid fa-check-circle text-gold-400 text-base"></i>
+        <span id="toastMessage">تم نسخ رابط الدعوة بنجاح!</span>
+    </div>
+
+    <script>
+        // Event Constants
+        const EVENT_DETAILS = {
+            title: "كتب كتاب سهيل وشيماء | Katb Ketab Sohail & Shimaa",
+            description: "يسرّنا أن نشارككم فرحتنا بمناسبة كتب كتاب سهيل وشيماء. وجودكم معنا هو أجمل ما يُكمل فرحتنا!",
+            location: "Crystal Palace Hall, اتحاد الشرطة الرياضي, القاهرة",
+            startDate: "2026-11-20T16:00:00+02:00", // Cairo Standard Time (UTC+2)
+            endDate: "2026-11-20T18:00:00+02:00",
+            timestamp: new Date("2026-11-20T16:00:00+02:00").getTime()
+        };
+
+        // Ambient Acoustic Oriental Celebration Tone generator (Web Audio API - No external mp3 dependency)
+        let audioCtx = null;
+        let isAudioPlaying = false;
+        let audioInterval = null;
+
+        function playSoftMelody() {
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+
+            // Soft Arabian scale notes (Bayati / Hijaz frequencies in Hz)
+            const scale = [261.63, 293.66, 329.63, 349.23, 392.00, 440.00, 523.25]; // C4 D4 E4 F4 G4 A4 C5
+            let noteIdx = 0;
+
+            audioInterval = setInterval(() => {
+                if (!isAudioPlaying) return;
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+
+                const freq = scale[Math.floor(Math.random() * scale.length)];
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+
+                gain.gain.setValueAtTime(0.001, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.04, audioCtx.currentTime + 0.3);
+                gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 2.0);
+
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+
+                osc.start();
+                osc.stop(audioCtx.currentTime + 2.2);
+            }, 1200);
+        }
+
+        function stopSoftMelody() {
+            if (audioInterval) clearInterval(audioInterval);
+            if (audioCtx && audioCtx.state === 'running') {
+                audioCtx.suspend();
+            }
+        }
+
+        const audioToggleBtn = document.getElementById('audioToggleBtn');
+        const audioIcon = document.getElementById('audioIcon');
+        const audioText = document.getElementById('audioText');
+
+        audioToggleBtn.addEventListener('click', () => {
+            isAudioPlaying = !isAudioPlaying;
+            if (isAudioPlaying) {
+                playSoftMelody();
+                audioIcon.className = "fa-solid fa-volume-high text-emerald-400";
+                audioText.textContent = "إيقاف النغمة";
+                showToast("تم تشغيل النغمة الهادئة 🎵");
+            } else {
+                stopSoftMelody();
+                audioIcon.className = "fa-solid fa-volume-xmark text-neutral-400";
+                audioText.textContent = "موسيقى هادئة";
+                showToast("تم إيقاف النغمة");
+            }
+        });
+
+        // Countdown Clock Implementation
+        const daysEl = document.getElementById('daysCount');
+        const hoursEl = document.getElementById('hoursCount');
+        const minutesEl = document.getElementById('minutesCount');
+        const secondsEl = document.getElementById('secondsCount');
+        const startedMsg = document.getElementById('eventStartedMessage');
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const difference = EVENT_DETAILS.timestamp - now;
+
+            if (difference <= 0) {
+                daysEl.textContent = '00';
+                hoursEl.textContent = '00';
+                minutesEl.textContent = '00';
+                secondsEl.textContent = '00';
+                startedMsg.classList.remove('hidden');
+                return;
+            }
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            // Format numbers with leading zeros and Arabic digits
+            daysEl.textContent = String(days).padStart(2, '0');
+            hoursEl.textContent = String(hours).padStart(2, '0');
+            minutesEl.textContent = String(minutes).padStart(2, '0');
+            secondsEl.textContent = String(seconds).padStart(2, '0');
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Golden Fairy Dust / Sparkles Floating Particle Canvas
+        const canvas = document.getElementById('sparkleCanvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        let particlesActive = true;
+        let animationFrameId = null;
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        class Particle {
+            constructor() {
+                this.reset();
+            }
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2.5 + 0.5;
+                this.speedY = -(Math.random() * 0.4 + 0.15);
+                this.speedX = (Math.random() - 0.5) * 0.3;
+                this.opacity = Math.random() * 0.6 + 0.2;
+                this.fadeSpeed = Math.random() * 0.008 + 0.002;
+                this.growing = Math.random() > 0.5;
+            }
+            update() {
+                this.y += this.speedY;
+                this.x += this.speedX;
+
+                if (this.growing) {
+                    this.opacity += this.fadeSpeed;
+                    if (this.opacity >= 0.85) this.growing = false;
+                } else {
+                    this.opacity -= this.fadeSpeed;
+                    if (this.opacity <= 0.1) this.growing = true;
+                }
+
+                if (this.y < -10 || this.x < -10 || this.x > canvas.width + 10) {
+                    this.reset();
+                    this.y = canvas.height + 5;
+                }
+            }
+            draw() {
+                ctx.save();
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(227, 186, 106, ${this.opacity})`;
+                ctx.shadowBlur = 8;
+                ctx.shadowColor = "rgba(255, 230, 150, 0.9)";
+                ctx.fill();
+                ctx.restore();
+            }
+        }
+
+        // Initialize particles
+        const particleCount = window.innerWidth < 640 ? 35 : 75;
+        for (let i = 0; i < particleCount; i++) {
+            particles.push(new Particle());
+        }
+
+        function animateParticles() {
+            if (!particlesActive) return;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+            }
+            animationFrameId = requestAnimationFrame(animateParticles);
+        }
+        animateParticles();
+
+        // Toggle sparkles control
+        const toggleSparklesBtn = document.getElementById('toggleSparklesBtn');
+        const sparkleIcon = document.getElementById('sparkleIcon');
+
+        toggleSparklesBtn.addEventListener('click', () => {
+            particlesActive = !particlesActive;
+            if (particlesActive) {
+                sparkleIcon.className = "fa-solid fa-sparkles text-gold-400";
+                animateParticles();
+                showToast("تم تفعيل البريق الذهبي ✨");
+            } else {
+                sparkleIcon.className = "fa-solid fa-sparkles text-neutral-500";
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                cancelAnimationFrame(animationFrameId);
+                showToast("تم إيقاف البريق الذهبي");
+            }
+        });
+
+        // Google Calendar & iCal Export Logic
+        const calendarModal = document.getElementById('calendarModal');
+        const addToCalendarBtn = document.getElementById('addToCalendarBtn');
+        const closeCalendarModal = document.getElementById('closeCalendarModal');
+        const googleCalLink = document.getElementById('googleCalLink');
+        const downloadIcsBtn = document.getElementById('downloadIcsBtn');
+
+        // Google Calendar Link generator:
+        // Start: 20261120T140000Z (4:00 PM Cairo UTC+2 = 14:00 UTC)
+        // End: 20261120T160000Z (6:00 PM Cairo UTC+2 = 16:00 UTC)
+        const gcalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(EVENT_DETAILS.title)}&dates=20261120T140000Z/20261120T160000Z&details=${encodeURIComponent(EVENT_DETAILS.description)}&location=${encodeURIComponent(EVENT_DETAILS.location)}`;
+        googleCalLink.href = gcalUrl;
+
+        addToCalendarBtn.addEventListener('click', () => {
+            calendarModal.classList.remove('hidden');
+        });
+        closeCalendarModal.addEventListener('click', () => {
+            calendarModal.classList.add('hidden');
+        });
+        calendarModal.addEventListener('click', (e) => {
+            if (e.target === calendarModal) calendarModal.classList.add('hidden');
+        });
+
+        // Generate and download .ics file for Apple Calendar & Outlook
+        downloadIcsBtn.addEventListener('click', () => {
+            const icsData = [
+                'BEGIN:VCALENDAR',
+                'VERSION:2.0',
+                'PRODID:-//Sohail & Shimaa//Katb Ketab Invitation//AR',
+                'CALSCALE:GREGORIAN',
+                'BEGIN:VEVENT',
+                'UID:katb-ketab-' + Date.now() + '@sohailandshimaa.com',
+                'DTSTAMP:20261120T140000Z',
+                'DTSTART:20261120T140000Z',
+                'DTEND:20261120T160000Z',
+                `SUMMARY:${EVENT_DETAILS.title}`,
+                `DESCRIPTION:${EVENT_DETAILS.description}`,
+                `LOCATION:${EVENT_DETAILS.location}`,
+                'STATUS:CONFIRMED',
+                'END:VEVENT',
+                'END:VCALENDAR'
+            ].join('\r\n');
+
+            const blob = new Blob([icsData], { type: 'text/calendar;charset=utf-8' });
+            const link = document.createElement('a');
+            link.href = window.URL.createObjectURL(blob);
+            link.setAttribute('download', 'Katb_Ketab_Sohail_Shimaa.ics');
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            calendarModal.classList.add('hidden');
+            showToast("تم تنزيل موعد الحفل إلى تقويم جهازك 📅");
+        });
+
+        // Toast helper (replaces alerts safely)
+        function showToast(text) {
+            const toast = document.getElementById('toastBox');
+            const msg = document.getElementById('toastMessage');
+            msg.textContent = text;
+            toast.classList.remove('hidden');
+            toast.classList.remove('toast-exit');
+            toast.classList.add('toast-enter');
+
+            setTimeout(() => {
+                toast.classList.remove('toast-enter');
+                toast.classList.add('toast-exit');
+                setTimeout(() => toast.classList.add('hidden'), 300);
+            }, 3000);
+        }
+
+        // Share button handler (Web Share API with fallback)
+        const shareBtn = document.getElementById('shareBtn');
+        shareBtn.addEventListener('click', async () => {
+            const shareData = {
+                title: 'دعوة كتب كتاب | سهيل & شيماء',
+                text: 'يسرّنا أن نشارككم فرحتنا بمناسبة كتب كتاب سهيل وشيماء - الجمعة 20 نوفمبر 2026 بقاعة كريستال بالاس',
+                url: window.location.href
+            };
+
+            if (navigator.share) {
+                try {
+                    await navigator.share(shareData);
+                } catch (err) {
+                    copyToClipboard(window.location.href);
+                }
+            } else {
+                copyToClipboard(window.location.href);
+            }
+        });
+
+        function copyToClipboard(text) {
+            const tempInput = document.createElement('input');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            try {
+                document.execCommand('copy');
+                showToast("تم نسخ رابط الدعوة بنجاح! 📋");
+            } catch (err) {
+                showToast("يمكنك نسخ الرابط من شريط العنوان");
+            }
+            document.body.removeChild(tempInput);
+        }
+
+        // WhatsApp Share Message Helper
+        const sendWhatsAppBtn = document.getElementById('sendWhatsAppBtn');
+        sendWhatsAppBtn.addEventListener('click', () => {
+            const name = document.getElementById('guestName').value.trim() || 'صديق محب';
+            const status = document.querySelector('input[name="attendanceStatus"]:checked').value;
+            const message = document.getElementById('guestMessage').value.trim();
+
+            const statusText = status === 'attend' 
+                ? 'يسعدني ويشرفني تأكيد الحضور لمشاركتكم الفرحة 💍' 
+                : 'أعتذر بكل حب لعدم تمكني من الحضور، وأتمنى لكما حياة عامرة بالهناء والبركة 🤍';
+
+            let waText = `*تهنئة بمناسبة كتب كتاب سهيل & شيماء*\n`;
+            waText += `👤 الاسم: ${name}\n`;
+            waText += `💌 تأكيد الحضور: ${statusText}\n`;
+            if (message) {
+                waText += `✨ كلمة التهنئة: "${message}"\n`;
+            }
+            waText += `\nبارك الله لكما وبارك عليكما وجمع بينكما في خير 🎉`;
+
+            const waUrl = `https://wa.me/?text=${encodeURIComponent(waText)}`;
+            window.open(waUrl, '_blank');
+        });
+
+        // Form Submission with Golden Confetti Celebration
+        const rsvpForm = document.getElementById('rsvpForm');
+        const rsvpSuccessCard = document.getElementById('rsvpSuccessCard');
+        const rsvpSuccessName = document.getElementById('rsvpSuccessName');
+
+        rsvpForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('guestName').value.trim();
+            if (!name) return;
+
+            // Trigger Confetti Blast
+            if (typeof confetti === 'function') {
+                // Gold and Ivory Confetti
+                const count = 200;
+                const defaults = {
+                    origin: { y: 0.7 }
+                };
+
+                function fire(particleRatio, opts) {
+                    confetti(Object.assign({}, defaults, opts, {
+                        particleCount: Math.floor(count * particleRatio)
+                    }));
+                }
+
+                fire(0.25, {
+                    spread: 26,
+                    startVelocity: 55,
+                    colors: ['#c2902d', '#fae29f', '#ffffff']
+                });
+                fire(0.2, {
+                    spread: 60,
+                    colors: ['#86541f', '#d5aa4b', '#ffd700']
+                });
+                fire(0.35, {
+                    spread: 100,
+                    decay: 0.91,
+                    scalar: 0.8,
+                    colors: ['#fae29f', '#e6be6d', '#ffffff']
+                });
+                fire(0.1, {
+                    spread: 120,
+                    startVelocity: 25,
+                    decay: 0.92,
+                    scalar: 1.2,
+                    colors: ['#c2902d', '#996e28']
+                });
+                fire(0.1, {
+                    spread: 120,
+                    startVelocity: 45,
+                    colors: ['#ffd700', '#f4ebd7']
+                });
+            }
+
+            // Display success message
+            rsvpSuccessName.textContent = `أهلاً بك يا ${name} ❤️`;
+            rsvpSuccessCard.classList.remove('hidden');
+            rsvpForm.classList.add('opacity-80');
+            showToast("تم تسجيل تهنئتكم الكريمة بكل حب! 🎉");
+        });
+
+        // Window Load Handler
+        window.onload = function () {
+            // Subtle initial welcome shimmer
+            setTimeout(() => {
+                if (typeof confetti === 'function') {
+                    confetti({
+                        particleCount: 40,
+                        spread: 50,
+                        origin: { y: 0.8 },
+                        colors: ['#fae29f', '#c2902d', '#e1d2b0']
+                    });
+                }
+            }, 600);
+        };
+    </script>
+</body>
+</html>
